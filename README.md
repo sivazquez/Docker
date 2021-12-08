@@ -25,3 +25,7 @@ docker run -d \
 -v {{ROUTE HOST VOLUME}:/var/www/html  \
 {{IMAGE LABEL NAME FROM BUILD}}
 
+## Angular
+inside the angular project add the dockerfile and docker-compose.yml files
+### Build and Run
+docker-compose up -d

@@ -1,0 +1,20 @@
+version: '3.8'
+
+networks:
+  docker-network-localhost:
+
+services:
+  
+  adminer-localhost:
+    container_name: adminer-localhost
+    image: adminer:latest
+    restart: always
+    environment:
+      ADMINER_DEFAULT_DB_DRIVER: mysql
+      ADMINER_DEFAULT_SERVER: localhost
+      ADMINER_DEFAULT_DB_HOST: localhost
+      ADMINER_DESIGN: dracula
+    ports:
+      - 8801:8080
+    networks:
+      - docker-network-localhost
